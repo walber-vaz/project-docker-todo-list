@@ -2,9 +2,9 @@ FROM node:14
 
 WORKDIR /app
 
-COPY . .
+ADD node_modules.tar.gz .
 
-ADD node_modules.tar.gz /app/node_modules
+COPY . .
 
 EXPOSE 3001
 ENTRYPOINT [ "npm" ]
